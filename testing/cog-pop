@@ -1,0 +1,66 @@
+f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15
+f1 f5 f6 f9 f13
+f1 f5 f7 f8 f10 f11 f12 f13
+19
+drive_kids_home/f4 f2 f14/f1 f13 f6/f2 f14 f7
+drive_kids_school/f4 f1 f13/f2 f14/f1 f13
+drive_home/f4/f1/f2 f3
+drive_school/f4/f2/f1 f3
+drive_mall/f4/f3/f1 f2
+do_laundry/f1 f4/f8/
+cook_meal/f1 f4 f9 f10/f15/f9
+serve_meal/f1 f4 f15/f7/f6 f15
+serve_breakfast/f1 f4 f13/f7/f9
+clean_kitchen/f1 f4/f9/
+get_groceries/f3 f4/f10/
+read_book/f1 f4 f14/f11/
+watch_movie/f3 f4/f12/
+wakeup/f1 f5/f4/f5
+goto_sleep/f1 f4/f5/f4
+check_at_mall/f3//
+check_at_home/f1//
+check_full/f7//
+check_clean_kitchen/f9//
+30
+O/wakeup/serve_breakfast/-/-
+O/serve_breakfast/drive_kids_school/-/-
+O/check_full/drive_kids_school/-/-
+O/drive_kids_school/drive_mall/-/-
+O/drive_mall/check_at_mall/-/-
+O/drive_mall/get_groceries/-/-
+O/get_groceries/watch_movie/-/-
+O/watch_movie/drive_home/-/-
+O/drive_home/do_laundry/-/-
+O/drive_home/read_book/-/-
+O/read_book/drive_school/-/-
+O/drive_school/drive_kids_home/-/-
+O/drive_kids_home/clean_kitchen/-/-
+O/drive_kids_home/check_clean_kitchen/-/-
+O/cook_meal/serve_meal/-/-
+O/serve_meal/goto_sleep/-/-
+O/clean_kitchen/goto_sleep/-/-
+O/do_laundry/goto_sleep/-/-
+P/serve_breakfast/drive_kids_school/10/inf
+P/check_at_mall/watch_movie/30/inf
+P/check_clean_kitchen/cook_meal/10/inf
+F/do_laundry/goal/240/1020
+F/do_laundry/check_at_home/eps/10
+F/serve_meal/goal/300/inf
+P/init/wakeup/360/480
+P/wakeup/goto_sleep/eps/960
+F/wakeup/check_full/eps/60
+P/init/drive_kids_school/480/510
+P/init/goal/1440/1440
+P/init/drive_kids_home/900/930
+11
+ED/do_laundry/30/60
+ED/watch_movie/90/120
+SD/drive_kids_school/30/30
+SD/drive_kids_home/30/30
+SD/drive_mall/20/20
+SD/drive_home/20/20
+SD/drive_school/20/20
+ED/cook_meal/10/30
+ED/clean_kitchen/20/20
+ED/get_groceries/60/60
+ED/read_book/30/180

@@ -1,0 +1,43 @@
+
+ff: parsing domain file
+domain 'ROVER' defined
+ ... done.
+ff: parsing problem file
+problem 'ROVERPROB1234' defined
+ ... done.
+
+
+got 35 facts
+
+Cueing down from goal distance:    9 into depth [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1][2]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: CALIBRATE ROVER0 CAMERA0 OBJECTIVE1 WAYPOINT3
+        1: TAKE_IMAGE ROVER0 WAYPOINT3 OBJECTIVE1 CAMERA0 HIGH_RES
+        2: COMMUNICATE_IMAGE_DATA ROVER0 GENERAL OBJECTIVE1 HIGH_RES WAYPOINT3 WAYPOINT0
+        3: SAMPLE_ROCK ROVER0 ROVER0STORE WAYPOINT3
+        4: COMMUNICATE_ROCK_DATA ROVER0 GENERAL WAYPOINT3 WAYPOINT3 WAYPOINT0
+        5: NAVIGATE ROVER0 WAYPOINT3 WAYPOINT1
+        6: NAVIGATE ROVER0 WAYPOINT1 WAYPOINT2
+        7: DROP ROVER0 ROVER0STORE
+        8: SAMPLE_SOIL ROVER0 ROVER0STORE WAYPOINT2
+        9: COMMUNICATE_SOIL_DATA ROVER0 GENERAL WAYPOINT2 WAYPOINT2 WAYPOINT0
+     
+
+time spent:    0.00 seconds instantiating 77 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 35 facts and 63 actions
+               0.00 seconds creating final representation with 35 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 14 states, to a max depth of 2
+               0.00 seconds total time
+

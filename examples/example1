@@ -1,0 +1,27 @@
+f1 f2 f3
+f1
+f3
+2
+step1/f1/f2/f1
+step2/f2/f3/f2
+1
+F/step1/step2/3/5
+0
+start simulation
+2
+6
+Check if we can execute step2 right away.:G/0.0/f2
+Execute step1.:A/1.0/step1
+Check again for step2:G/1.0/f2
+Check for step2 after t=4:G/4.0/f2
+Check for step2 after t=6:G/6.0/f2
+Check for step2 after t=6.1:G/6.1/f2
+7
+Check what the first action should be:G/0.0/f1
+Execute step1 at time 3:A/3.0/step1
+Check what the agent should do at t=3:G/3.0/f2
+Check again 3 time steps later:G/6.0/f2
+And one more time in another 1 time step:G/7.0/f2
+Execute step2:A/7.0/step2
+Check what the agent should now do:G/7.0/f3
+end simulation
